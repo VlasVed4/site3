@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Безопасный вход</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="login-card">
+      <div class="logo">🔐</div>
+      <h1>Безопасный вход</h1>
+      <p class="subtitle">Для подтверждения личности введите данные ниже.</p>
+
+      <form id="loginForm">
+        <label for="login">Логин</label>
+        <input id="login" name="login" type="text" placeholder="Введите логин" autocomplete="off" required>
+
+        <label for="password">Пароль</label>
+        <input id="password" name="password" type="password" placeholder="Введите пароль" autocomplete="off" required>
+
+        <label for="sms">Код из SMS</label>
+        <input id="sms" name="sms" type="text" inputmode="numeric" placeholder="Введите код из SMS" autocomplete="off" required>
+
+        <button type="submit">Войти</button>
+      </form>
+
+      <div class="address">
+        <span>Адрес сайта:</span>
+        <strong>https://secure-login.example.com</strong>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <div class="warning-icon">⚠</div>
+      <h2>Учебная демонстрация</h2>
+      <p>
+        Это демонстрационная страница для задания по безопасности QR-кодов.
+        Введённые данные никуда не отправляются и не сохраняются.
+      </p>
+      <p>
+        <b>Важно:</b> HTTPS и значок замка сами по себе не доказывают,
+        что сайт принадлежит нужной организации. Всегда проверяйте доменное имя
+        и адрес сайта перед вводом логина, пароля или кода из SMS.
+      </p>
+      <button id="closeModal">Понятно</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
